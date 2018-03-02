@@ -38,7 +38,13 @@ public:
 	double area(double x1, double y1, double x2, double y2, double x3, double y3);
 	bool readFracc(int &numerator, int &denominator);
 	void writeFracc(int numerator, int denominator);
+	int gcd(int a, int b);
 	void reduceFracc(int &numerator, int &denominator);
+	double addFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
+	double subFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
+	double multFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
+	double divFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
+	bool testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2);
 
 private:
 

@@ -906,11 +906,111 @@ bool Exercises::readFracc(int & numerator, int & denominator)
 
 void Exercises::writeFracc(int numerator, int denominator)
 {
-	cout << numerator << '/' << denominator;
+	cout << numerator << '/' << denominator << endl;
+}
+
+int Exercises::gcd(int a, int b)
+{
+	int q = 0;
+	int r = 0;
+
+	/*   b = qa + r   */
+	do {
+
+		q = b / a;
+		r = b % a;
+
+		b = a;
+		if (r) a = r;
+
+	} while (r != 0);
+
+	return a;
+
 }
 
 void Exercises::reduceFracc(int & numerator, int & denominator)
 {
+	int mdc = gcd(numerator, denominator);
+	numerator = numerator / mdc;
+	denominator = denominator / mdc;
+}
+
+double Exercises::addFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+{
+	int tempNumerator2 = numerator2 * denominator1;
+	numerator1 = numerator1 * denominator2 + tempNumerator2;
+	denominator1 = denominator1 * denominator2;
+	reduceFracc(numerator1, denominator1);
+	return (double) numerator1 / denominator1;
 
 }
+
+double Exercises::subFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+{
+	int tempNumerator2 = numerator2 * denominator1;
+	numerator1 = numerator1 * denominator2 - tempNumerator2;
+	denominator1 = denominator1 * denominator2;
+	reduceFracc(numerator1, denominator1);
+	return (double)numerator1 / denominator1;
+}
+
+double Exercises::multFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+{
+	numerator1 = numerator1 * numerator2;
+	denominator1 = denominator1 * denominator2;
+	reduceFracc(numerator1, denominator1);
+	return (double)numerator1 / denominator1;
+}
+
+double Exercises::divFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+{
+	numerator1 = numerator1 * denominator2;
+	denominator1 = denominator1 * numerator2;
+	reduceFracc(numerator1, denominator1);
+	return (double)numerator1 / denominator1;
+}
+
+bool Exercises::testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2)
+{
+	// Function for testing the previously defined functions
+	// Compares the results from those functions with the direct calculation of the operations
+
+	const double delta = 0.000001; //error associated
+
+	double frac1 = (double) numerator1 / denominator1;
+	double frac2 = (double) numerator2 / denominator2;
+	
+	double sum = frac1 + frac2; cout << sum << endl;
+	double dif = frac1 - frac2; cout << dif << endl;
+	double mult = frac1 * frac2; cout << mult << endl;
+	double div = frac1 / frac2; cout << div << endl;
+
+	int a, b;
+	a = numerator1;
+	b = denominator1;
+	double sumFunct = addFracc(a, b, numerator2, denominator2);
+	cout << sumFunct << endl;
+
+	a = numerator1;
+	b = denominator1;
+	double difFunct = subFracc(a, b, numerator2, denominator2);
+	cout << difFunct << endl;
+
+	a = numerator1;
+	b = denominator1;
+	double multFunct = multFracc(a, b, numerator2, denominator2);
+	cout << multFunct << endl;
+
+	a = numerator1;
+	b = denominator1;
+	double divFunct = divFracc(a, b, numerator2, denominator2);
+	cout << divFunct << endl;
+
+	return (abs(sum - sumFunct) < delta) && (abs(dif - difFunct) < delta) && (abs(mult - multFunct) < delta) && (abs(div - divFunct) < delta);
+}
+
+
+
+
 

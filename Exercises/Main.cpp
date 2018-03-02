@@ -5,8 +5,8 @@ int main()
 {
 	Exercises exercises;
 	int a = 2, b = 3;
-	exercises.readFracc(a, b);
-	exercises.writeFracc(a, b);
+	
+	std::cout << exercises.testFraccOps(a, b, 4, 5);
 
 	return 0;
 
