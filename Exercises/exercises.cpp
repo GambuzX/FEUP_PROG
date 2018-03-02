@@ -874,3 +874,43 @@ int Exercises::exe3_8(int m, int n)
 	}
 }
 
+double Exercises::distance(double x1, double y1, double x2, double y2)
+{
+	return sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+}
+
+double Exercises::area(double x1, double y1, double x2, double y2, double x3, double y3)
+{
+	double a,b,c,s,total;
+	a = distance(x1, y1, x2, y2);
+	b = distance(x2, y2, x3, y3);
+	c = distance(x3, y3, x1, y1);
+	s = (a + b + c) / 2;
+	total = sqrt(s*(s - a)*(s - b)*(s - c));
+	return total;
+}
+
+bool Exercises::readFracc(int & numerator, int & denominator)
+{
+	char bar; // Char to hold the bar between the numbers, so as not to trigger the error flag
+	cin >> numerator >> bar >> denominator; // Keeps the input values
+
+	if (cin && bar == '/')
+		return true;
+	else {
+		numerator = 0;
+		denominator = 0;
+		return false;
+	}
+}
+
+void Exercises::writeFracc(int numerator, int denominator)
+{
+	cout << numerator << '/' << denominator;
+}
+
+void Exercises::reduceFracc(int & numerator, int & denominator)
+{
+
+}
+

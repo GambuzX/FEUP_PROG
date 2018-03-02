@@ -4,7 +4,9 @@
 int main()
 {
 	Exercises exercises;
-	exercises.exe1_2();
+	int a = 2, b = 3;
+	exercises.readFracc(a, b);
+	exercises.writeFracc(a, b);
 
 	return 0;
 

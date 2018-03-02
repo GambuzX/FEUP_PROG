@@ -34,6 +34,11 @@ public:
 	void exe2_14_a();
 	void exe2_14_b();
 	int exe3_8(int m, int n);
+	double distance(double x1, double y1, double x2, double y2);
+	double area(double x1, double y1, double x2, double y2, double x3, double y3);
+	bool readFracc(int &numerator, int &denominator);
+	void writeFracc(int numerator, int denominator);
+	void reduceFracc(int &numerator, int &denominator);
 
 private:
 
