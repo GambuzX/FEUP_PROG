@@ -1052,7 +1052,7 @@ int Exercises::daysInMonthOfYear(int month, int year)
 	}
 }
 
-int Exercises::weekDay(int year, int month, int day)
+int Exercises::weekDay(int day, int month, int year)
 {
 	bool leapYear = isLeapYear(year);
 
@@ -1097,6 +1097,39 @@ int Exercises::weekDay(int year, int month, int day)
 	ds = ((5*a/4) + c + day - 2*(s%4) + 7) % 7; // Formula de calculo do dia da semana de Sohael Babwani
 
 	return ds;
+}
+
+void Exercises::writeWeekDay(int day, int month, int year)
+{
+	day = weekDay(day, month, year);
+
+	switch (day) {
+	case 0:
+		cout << "Sabado";
+		break;
+	case 1:
+		cout << "Domingo";
+		break;
+	case 2:
+		cout << "Segunda-feira";
+		break;
+	case 3:
+		cout << "Terca-feira";
+		break;
+	case 4:
+		cout << "Quarta-feira";
+		break;
+	case 5:
+		cout << "Quinta-feira";
+		break;
+	case 6:
+		cout << "Sexta-feira";
+		break;	
+	default:
+		break;
+	}
+
+	return;
 }
 
 

@@ -47,7 +47,8 @@ public:
 	bool testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2);
 	bool isLeapYear(int year);
 	int daysInMonthOfYear(int month, int year);
-	int weekDay(int year, int month, int day);
+	int weekDay(int day, int month, int year);
+	void writeWeekDay(int day, int month, int year);
 
 private:
 
