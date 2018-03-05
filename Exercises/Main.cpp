@@ -6,7 +6,7 @@ int main()
 	Exercises exercises;
 	int a = 2, b = 3;
 	
-	std::cout << exercises.testFraccOps(a, b, 4, 5);
+	std::cout << exercises.weekDay(2011, 1, 1) << std::endl;
 
 	return 0;
 

@@ -1010,6 +1010,95 @@ bool Exercises::testFraccOps(int numerator1, int denominator1, int numerator2, i
 	return (abs(sum - sumFunct) < delta) && (abs(dif - difFunct) < delta) && (abs(mult - multFunct) < delta) && (abs(div - divFunct) < delta);
 }
 
+bool Exercises::isLeapYear(int year)
+{
+	// Returns a boolean representing whether or not the year is a Leap Year
+	bool bLeapYear;
+
+	if (year % 400 == 0) //divisivel por 400
+		bLeapYear = true;
+	else if (year % 100 != 0 && year % 4 == 0) //divisivel por 4, mas não por 100
+		bLeapYear = true;
+	else
+		bLeapYear = false;
+
+	return bLeapYear;
+}
+
+int Exercises::daysInMonthOfYear(int month, int year)
+{
+	//returns the number of days of the specified month in the specified year
+	bool leapYear = isLeapYear(year);
+
+	switch (month) {
+	case 1:	return 31;
+	case 2:	if (leapYear)
+				return 29;
+			else
+				return 28;
+	case 3: return 31;
+	case 4: return 30;
+	case 5: return 31;
+	case 6: return 30;
+	case 7: return 31;
+	case 8: return 31;
+	case 9: return 30;
+	case 10: return 31;
+	case 11: return 30;
+	case 12: return 31;
+
+	default:
+		return 0;
+	}
+}
+
+int Exercises::weekDay(int year, int month, int day)
+{
+	bool leapYear = isLeapYear(year);
+
+	int ds, s, a, c; // s = 2 first digits of year; a = 2 last digits of year; c = month code
+
+	s = year / 100;
+	a = year % 100;
+
+	if (leapYear) { //sets the month code depending on the year, if it is a leap year or not
+		switch (month) {
+		case 1: c = 6; break;
+		case 2: c = 2; break;
+		case 3: c = 3; break;
+		case 4: c = 6; break;
+		case 5: c = 1; break;
+		case 6: c = 4; break;
+		case 7: c = 6; break;
+		case 8: c = 2; break;
+		case 9: c = 5; break;
+		case 10: c = 0; break;
+		case 11: c = 3; break;
+		case 12: c = 5; break;
+		}
+	}
+	else {
+		switch (month) {
+		case 1: c = 0; break;
+		case 2: c = 3; break;
+		case 3: c = 3; break;
+		case 4: c = 6; break;
+		case 5: c = 1; break;
+		case 6: c = 4; break;
+		case 7: c = 6; break;
+		case 8: c = 2; break;
+		case 9: c = 5; break;
+		case 10: c = 0; break;
+		case 11: c = 3; break;
+		case 12: c = 5; break;
+		}
+	}
+
+	ds = ((5*a/4) + c + day - 2*(s%4) + 7) % 7; // Formula de calculo do dia da semana de Sohael Babwani
+
+	return ds;
+}
+
 
 
 

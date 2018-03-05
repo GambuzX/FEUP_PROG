@@ -45,6 +45,9 @@ public:
 	double multFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
 	double divFracc(int &numerator1, int& denominator1, int numerator2, int denominator2);
 	bool testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2);
+	bool isLeapYear(int year);
+	int daysInMonthOfYear(int month, int year);
+	int weekDay(int year, int month, int day);
 
 private:
 
