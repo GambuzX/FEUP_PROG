@@ -5,7 +5,7 @@ int main()
 {
 	Exercises exercises;
 	
-	std::cout << exercises.recursiveEuclidesAlgorithm(12,6);
+	std::cout << exercises.testEuclidesAlgorithm(13213, 321);
 
 	return 0;
 

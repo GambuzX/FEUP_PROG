@@ -1274,7 +1274,8 @@ int Exercises::recursiveEuclidesAlgorithm(int m, int n)
 
 bool Exercises::testEuclidesAlgorithm(int m, int n)
 {
-	return false;
+	int gdc = recursiveEuclidesAlgorithm(m, n);
+	return (m % gdc == 0) && (n % gdc == 0) && (recursiveEuclidesAlgorithm(m, gdc) % n != 0) && (recursiveEuclidesAlgorithm(n, gdc) % m != 0);
 }
 
 
