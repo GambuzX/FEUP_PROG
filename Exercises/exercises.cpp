@@ -1301,7 +1301,9 @@ bool Exercises::testEuclidesAlgorithm(int m, int n)
 
 bool Exercises::isHydroxide(char compound[])
 {
-	int length = sizeof(compound);
+	int length = sizeof(compound) / sizeof(compound[0]);
+	cout << sizeof(compound) << sizeof(compound[0]);
+	cout << length << endl;
 	return (compound[length - 2] == 'O') && (compound[length - 1] == 'H');
 }
 
