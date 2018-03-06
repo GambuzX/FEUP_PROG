@@ -4,7 +4,7 @@
 int main()
 {
 	Exercises exercises;
-
+	exercises.testRound();
 	return 0;
 
 }

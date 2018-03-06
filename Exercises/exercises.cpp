@@ -900,6 +900,17 @@ double Exercises::round(double x, unsigned n)
 	return y;
 }
 
+void Exercises::testRound()
+{
+	double x;
+	unsigned n;
+
+	cout << "x? "; cin >> x;
+	cout << "n? "; cin >> n;
+
+	cout << "Rounded value = " << fixed << setprecision (n) << round(x, n);
+}
+
 bool Exercises::readFracc(int & numerator, int & denominator)
 {
 	char bar; // Char to hold the bar between the numbers, so as not to trigger the error flag

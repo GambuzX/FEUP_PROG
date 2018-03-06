@@ -37,6 +37,7 @@ public:
 	double distance(double x1, double y1, double x2, double y2);
 	double area(double x1, double y1, double x2, double y2, double x3, double y3);
 	double round(double x, unsigned n);
+	void testRound();
 	bool readFracc(int &numerator, int &denominator);
 	void writeFracc(int numerator, int denominator);
 	int gcd(int a, int b);
