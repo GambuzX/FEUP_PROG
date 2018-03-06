@@ -1299,6 +1299,35 @@ bool Exercises::testEuclidesAlgorithm(int m, int n)
 	return (m % gdc == 0) && (n % gdc == 0) && (recursiveEuclidesAlgorithm(m, gdc) % n != 0) && (recursiveEuclidesAlgorithm(n, gdc) % m != 0);
 }
 
+bool Exercises::isHydroxide(char compound[])
+{
+	int length = sizeof(compound);
+	return (compound[length - 2] == 'O') && (compound[length - 1] == 'H');
+}
+
+void Exercises::testIsHydroxide()
+{
+	char koh[] = "KOH";
+	cout << "Is KOH an Hydroxide? " << isHydroxide(koh) << endl;
+
+	char h202[] = "H2O2";
+	cout << "Is H2O2, an Hydroxide? " << isHydroxide(h202) << endl;
+
+	char nacl[] = "NaCl";
+	cout << "Is NaCl, an Hydroxide? " << isHydroxide(nacl) << endl;
+
+	char naoh[] = "NaOH";
+	cout << "Is NaOH, an Hydroxide? " << isHydroxide(naoh) << endl;
+
+	char c9h804[] = "C9H8O4";
+	cout << "Is C9H8O4, an Hydroxide? " << isHydroxide(c9h804) << endl;
+
+	char mgoh[] = "MgOH";
+	cout << "Is MgOH an Hydroxide? " << isHydroxide(mgoh) << endl;
+
+	return;
+}
+
 
 
 

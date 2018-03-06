@@ -3,6 +3,7 @@
 class Exercises
 {
 public:
+	//Chapter 1
 	void intro_exe();
 	void exe1_1();
 	void exe1_2();
@@ -10,6 +11,8 @@ public:
 	void exe1_4();
 	void exe1_5();
 	float exe1_6();
+
+	//Chapter 2
 	void exe2_2_a();
 	void exe2_2_b();
 	void exe2_2_c();
@@ -33,6 +36,8 @@ public:
 	void exe2_13();
 	void exe2_14_a();
 	void exe2_14_b();
+
+	//Chapter 3
 	int exe3_8(int m, int n);
 	double distance(double x1, double y1, double x2, double y2);
 	double area(double x1, double y1, double x2, double y2, double x3, double y3);
@@ -56,6 +61,10 @@ public:
 	void writeTimetableYear(int year);
 	int recursiveEuclidesAlgorithm(int m, int n);
 	bool testEuclidesAlgorithm(int m, int n);
+
+	//Chapter 4
+	bool isHydroxide(char compound[]);
+	void testIsHydroxide();
 
 private:
 
