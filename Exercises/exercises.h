@@ -52,6 +52,8 @@ public:
 	void writeMonth(int month);
 	void writeTimetableMonthInYear(int month, int year);
 	void writeTimetableYear(int year);
+	int recursiveEuclidesAlgorithm(int m, int n);
+	bool testEuclidesAlgorithm(int m, int n);
 
 private:
 

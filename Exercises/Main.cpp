@@ -5,7 +5,7 @@ int main()
 {
 	Exercises exercises;
 	
-	exercises.writeTimetableYear(2018);
+	std::cout << exercises.recursiveEuclidesAlgorithm(12,6);
 
 	return 0;
 

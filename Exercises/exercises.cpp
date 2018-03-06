@@ -1263,6 +1263,20 @@ void Exercises::writeTimetableYear(int year)
 	return;
 }
 
+int Exercises::recursiveEuclidesAlgorithm(int m, int n)
+{
+	if (m % n == 0)
+		return n;
+	else
+		recursiveEuclidesAlgorithm(n, m%n);
+	return 1;
+}
+
+bool Exercises::testEuclidesAlgorithm(int m, int n)
+{
+	return false;
+}
+
 
 
 
