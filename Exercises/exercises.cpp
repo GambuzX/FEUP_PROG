@@ -890,6 +890,16 @@ double Exercises::area(double x1, double y1, double x2, double y2, double x3, do
 	return total;
 }
 
+double Exercises::round(double x, unsigned n)
+{
+	double y;
+	double mult = pow(10,n);
+
+	y = floor(x * mult + 0.5) / mult;
+
+	return y;
+}
+
 bool Exercises::readFracc(int & numerator, int & denominator)
 {
 	char bar; // Char to hold the bar between the numbers, so as not to trigger the error flag
