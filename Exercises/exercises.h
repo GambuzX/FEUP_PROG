@@ -49,6 +49,9 @@ public:
 	int daysInMonthOfYear(int month, int year);
 	int weekDay(int day, int month, int year);
 	void writeWeekDay(int day, int month, int year);
+	void writeMonth(int month);
+	void writeTimetableMonthInYear(int month, int year);
+	void writeTimetableYear(int year);
 
 private:
 
