@@ -1367,6 +1367,16 @@ void Exercises::readIntArray(int a[], int nElem)
 	}
 }
 
+int Exercises::searchValueInIntArray(const int a[], int nElem, int value)
+{
+	for (int i = 0; i < nElem; i++) {
+		if (a[i] == value)
+			return i;
+	}
+
+	return -1;
+}
+
 
 
 

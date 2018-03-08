@@ -68,6 +68,7 @@ public:
 	void decompose(std::string compound);
 	void testDecompose();
 	void readIntArray(int a[], int nElem);
+	int searchValueInIntArray(const int a[], int nElem, int value);
 
 private:
 

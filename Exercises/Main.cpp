@@ -13,6 +13,8 @@ int main()
 	int a[5];
 	exercises.readIntArray(a, 5);
 
+	std::cout << exercises.searchValueInIntArray(a, 5, 12);
+
 	return 0;
 
 }
