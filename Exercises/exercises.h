@@ -69,6 +69,7 @@ public:
 	void testDecompose();
 	void readIntArray(int a[], int nElem);
 	int searchValueInIntArray(const int a[], int nElem, int value);
+	int searchMultValuesInIntArray(const int a[], int nElem, int value, int index[]);
 
 private:
 

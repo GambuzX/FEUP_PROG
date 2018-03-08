@@ -1377,6 +1377,21 @@ int Exercises::searchValueInIntArray(const int a[], int nElem, int value)
 	return -1;
 }
 
+int Exercises::searchMultValuesInIntArray(const int a[], int nElem, int value, int index[])
+{
+	int numberOfElements = 0;
+	int indexArrayIndex = 0;
+
+	for (int i = 0; i < nElem; i++) {
+		if (a[i] == value) {
+			numberOfElements++;
+			index[indexArrayIndex] = i;
+			indexArrayIndex++;
+		}
+	}
+	return numberOfElements;
+}
+
 
 
 
