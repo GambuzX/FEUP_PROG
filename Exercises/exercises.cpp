@@ -1328,6 +1328,25 @@ void Exercises::testIsHydroxide()
 	return;
 }
 
+void Exercises::decompose(string compound)
+{
+	cout << "O composto quimico " << compound << " tem como elementos ";
+	int length = compound.length();
+	
+
+	for (int i = 0; i < length; i++) {
+		if (isupper(compound[i]))
+			if (!islower(compound[i + 1]))
+				cout << compound[i] << " ";
+			else
+				cout << compound[i] << compound[i + 1] << " ";
+		else
+			continue;
+	}
+	cout << endl;
+	return;
+}
+
 
 
 

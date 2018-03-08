@@ -65,6 +65,7 @@ public:
 	//Chapter 4
 	bool isHydroxide(char compound[]);
 	void testIsHydroxide();
+	void decompose(std::string compound);
 
 private:
 
