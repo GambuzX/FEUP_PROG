@@ -67,6 +67,7 @@ public:
 	void testIsHydroxide();
 	void decompose(std::string compound);
 	void testDecompose();
+	void readIntArray(int a[], int nElem);
 
 private:
 

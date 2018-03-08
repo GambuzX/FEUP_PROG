@@ -10,7 +10,8 @@ Exercises exercises;
 
 int main()
 {
-	exercises.testDecompose();
+	int a[5];
+	exercises.readIntArray(a, 5);
 
 	return 0;
 

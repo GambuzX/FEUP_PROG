@@ -1359,6 +1359,14 @@ void Exercises::testDecompose()
 	return;
 }
 
+void Exercises::readIntArray(int a[], int nElem)
+{
+	for (int i = 0; i < nElem; i++) {
+		cout << "Elemento numero " << i + 1 << "? ";
+		cin >> a[i];
+	}
+}
+
 
 
 
