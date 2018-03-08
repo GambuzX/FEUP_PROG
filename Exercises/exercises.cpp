@@ -1347,6 +1347,18 @@ void Exercises::decompose(string compound)
 	return;
 }
 
+void Exercises::testDecompose()
+{
+	decompose("H2O");
+	decompose("KOH");
+	decompose("H2O2");
+	decompose("NaCl");
+	decompose("NaOH");
+	decompose("C9H8O4");
+	decompose("MgOH");
+	return;
+}
+
 
 
 

@@ -10,7 +10,7 @@ Exercises exercises;
 
 int main()
 {
-	exercises.decompose("NaCl");
+	exercises.testDecompose();
 
 	return 0;
 
