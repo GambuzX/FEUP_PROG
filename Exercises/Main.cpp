@@ -4,13 +4,14 @@
 */
 
 #include <iostream>
+#include <string>
 #include "exercises.h"
 
 Exercises exercises;
 
 int main()
 {
-	std::cout << exercises.sequenceSearch("abzzzzzzzzzzzzcvdz", 12, 'z') << std::endl;
+	std::cout << exercises.normalizeName("  abc     EEEDESzbcDOS") << std::endl;
 
 	return 0;
 

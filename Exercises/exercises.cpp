@@ -1381,6 +1381,49 @@ void Exercises::testDecompose()
 	return;
 }
 
+string Exercises::normalizeName(string name)
+{
+	string normalizedName = "";
+	string particlesToRemove[] = { "DE","DO", "DA", "DAS", "DOS", "E" };
+	
+	int startIndex = 0;
+	while (name[startIndex] == ' ') {
+		startIndex++;
+	}
+
+	int endIndex = name.length() - 1;
+	while (name[endIndex] == ' ') {
+		endIndex--;
+	}
+
+	for (int i = startIndex; i <= endIndex; i++) {
+		if (name[i] == 'E')
+			continue;
+		if (i + 1 <= endIndex && name[i] == 'D') {
+			if (name[i + 1] == 'E' || name[i + 1] == 'O' || name[i + 1] == 'A') {
+				i++;
+				continue;
+			}
+			else if (i + 2 <= endIndex) {
+				if (name[i + 1] == 'A' || name[i + 1] == 'O')
+					if (name[i + 2] == 'S') {
+						i += 2;
+						continue;
+					}
+			}
+			else
+				normalizedName.push_back('D');
+		}		
+		else if (i > startIndex && name[i - 1] == ' ')
+			continue;
+		else if (islower(name[i]))
+			normalizedName.push_back(toupper(name[i]));
+		else
+			normalizedName.push_back(name[i]);
+	}	
+	return normalizedName;
+}
+
 void Exercises::readIntArray(int a[], int nElem)
 {
 	for (int i = 0; i < nElem; i++) {
