@@ -65,6 +65,7 @@ public:
 	//Chapter 4
 	bool isHydroxide(char compound[]);
 	void testIsHydroxide();
+	bool sequenceSearch(std::string s, int nc, char c);
 	void decompose(std::string compound);
 	void testDecompose();
 	void readIntArray(int a[], int nElem);

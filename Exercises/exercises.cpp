@@ -1328,6 +1328,28 @@ void Exercises::testIsHydroxide()
 	return;
 }
 
+bool Exercises::sequenceSearch(string s, int nc, char c)
+{
+	bool hasSequence = false;
+	for (int i = 0; i < s.length(); i++) {
+		if (s[i] == c) {
+			for (int j = 0; j < nc; j++) {
+				if (s[i + j] == c) {
+					if (j + 1 == nc)
+						hasSequence = true;
+					continue;
+				}
+				else
+					break;
+			}
+		}
+		else
+			continue;
+	}
+
+	return hasSequence;
+}
+
 void Exercises::decompose(string compound)
 {
 	cout << "O composto quimico " << compound << " tem como elementos ";

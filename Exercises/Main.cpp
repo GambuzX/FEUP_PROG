@@ -10,15 +10,7 @@ Exercises exercises;
 
 int main()
 {
-	int a[5];
-	int b[5];
-	exercises.readIntArray(a, 5);
-
-	std::cout << exercises.searchMultValuesInIntArray(a, 5, 12, b);
-	
-	for (int i = 0; i < 5; i++) {
-		std::cout << b[i] << std::endl;
-	}
+	std::cout << exercises.sequenceSearch("abzzzzzzzzzzzzcvdz", 12, 'z') << std::endl;
 
 	return 0;
 
