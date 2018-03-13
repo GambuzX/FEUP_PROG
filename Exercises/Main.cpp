@@ -11,7 +11,9 @@ Exercises4 exercises;
 
 int main()
 {
-	std::cout << exercises.normalizeName("  abc     EEEDESzbcDOS") << std::endl;
+	Fraction frac = { 0,0 };
+	Fraction newFrac = exercises.reduceFracc(frac);
+	std::cout << newFrac.numerator << " / " << newFrac.denominator;
 
 	return 0;
 

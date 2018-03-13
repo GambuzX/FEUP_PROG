@@ -148,7 +148,10 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="exercises.h" />
+    <ClInclude Include="Exercises1.h" />
+    <ClInclude Include="Exercises2.h" />
+    <ClInclude Include="Exercises3.h" />
+    <ClInclude Include="Exercises4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,12 @@
 #pragma once
 #include <string>
 
+struct Fraction
+{
+	int numerator;
+	int denominator;
+};
+
 class Exercises4
 {
 public:
@@ -11,14 +17,10 @@ public:
 	void decompose(std::string compound);
 	void testDecompose();
 	std::string normalizeName(std::string name);
-
-	struct Fraction
-	{
-		int numerator;
-		int denominator;
-	};
-
+	Fraction readFracc();
+	Fraction reduceFracc(Fraction f);
 	void readIntArray(int a[], int nElem);
 	int searchValueInIntArray(const int a[], int nElem, int value);
 	int searchMultValuesInIntArray(const int a[], int nElem, int value, int index[]);
+
 };

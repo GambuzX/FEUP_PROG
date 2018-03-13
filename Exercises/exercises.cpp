@@ -1427,6 +1427,35 @@ string Exercises4::normalizeName(string name)
 	return normalizedName;
 }
 
+Fraction Exercises4::readFracc()
+{
+	Fraction fraction;
+	char bar; // Char to hold the bar between the numbers, so as not to trigger the error flag
+	cin >> fraction.numerator >> bar >> fraction.denominator; // Keeps the input values
+
+	if (cin && bar == '/')
+		return fraction;
+	else {
+		fraction.numerator = 0;
+		fraction.denominator = 0;
+		return fraction;
+	}
+
+	return Fraction();
+}
+
+Fraction Exercises4::reduceFracc(Fraction f)
+{
+	Exercises3 exercises3;
+	int mdc = exercises3.gcd(f.numerator, f.denominator);
+
+	Fraction frac = f;
+	frac.numerator = frac.numerator / mdc;
+	frac.denominator = frac.denominator / mdc;
+
+	return frac;
+}
+
 void Exercises4::readIntArray(int a[], int nElem)
 {
 	for (int i = 0; i < nElem; i++) {
