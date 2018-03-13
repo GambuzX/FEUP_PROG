@@ -30,4 +30,5 @@ public:
 	long int factorial_rec(int n);
 	int recursiveEuclidesAlgorithm(int m, int n);
 	bool testEuclidesAlgorithm(int m, int n);
+	double integrateTR(double f(double), double a, double b, int n);
 };

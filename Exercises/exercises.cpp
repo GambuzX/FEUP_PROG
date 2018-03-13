@@ -1325,6 +1325,18 @@ bool Exercises3::testEuclidesAlgorithm(int m, int n)
 	return (m % gdc == 0) && (n % gdc == 0) && (recursiveEuclidesAlgorithm(m, gdc) % n != 0) && (recursiveEuclidesAlgorithm(n, gdc) % m != 0);
 }
 
+double Exercises3::integrateTR(double f(double), double a, double b, int n)
+{
+	double total = 0;
+	double width = (b - a) / n;
+
+	for (int i = 1; i <= n; i++) {
+		total += width / 2 * (f(a + (i - 1) * width) + f(a + i * width));
+	}
+
+	return total;
+}
+
 bool Exercises4::isHydroxide(char compound[])
 {
 	int length = strlen(compound);

@@ -9,14 +9,25 @@
 #include <climits>
 
 Exercises3 exercises;
+double h(double);
 
 int main()
 {
-	long int fatorial = exercises.factorial_rec(5);
+	//integrateTR(double f(double), double a, double b, int n)
 
-	std::cout << "O numero maximo representavel e " << LONG_MAX << std::endl;
-	std::cout << fatorial << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 2) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 4) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 8) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 16) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 32) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 64) << std::endl;
+	std::cout << exercises.integrateTR(h, -2, 2, 128) << std::endl;
 
 	return 0;
 
+}
+
+double h(double x)
+{
+	return sqrt(4 - x * x);
 }
