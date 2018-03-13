@@ -1287,6 +1287,17 @@ void Exercises3::writeTimetableYear(int year)
 	return;
 }
 
+long int Exercises3::factorial_ite(int n)
+{
+	long int total = 1;
+
+	for (int i = n; i >= 1; i--) {
+		total = total * i;
+	}
+
+	return total;
+}
+
 int Exercises3::recursiveEuclidesAlgorithm(int m, int n)
 {
 	if (m % n == 0)

@@ -26,6 +26,7 @@ public:
 	void writeMonth(int month);
 	void writeTimetableMonthInYear(int month, int year);
 	void writeTimetableYear(int year);
+	long int factorial_ite(int n);
 	int recursiveEuclidesAlgorithm(int m, int n);
 	bool testEuclidesAlgorithm(int m, int n);
 };

@@ -5,16 +5,17 @@
 
 #include <iostream>
 #include <string>
-#include "Exercises4.h"
+#include "Exercises3.h"
+#include <climits>
 
-Exercises4 exercises;
+Exercises3 exercises;
 
 int main()
 {
-	Fraction frac = { 2,3 };
-	Fraction frac2 = { 4,5 };
-	Fraction newFrac = exercises.multFracc(frac, frac2);
-	std::cout << newFrac.numerator << " / " << newFrac.denominator;
+	long int fatorial = exercises.factorial_ite(20);
+
+	std::cout << "O numero maximo representavel e " << LONG_MAX << std::endl;
+	std::cout << fatorial << std::endl;
 
 	return 0;
 
