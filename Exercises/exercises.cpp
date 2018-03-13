@@ -1456,6 +1456,42 @@ Fraction Exercises4::reduceFracc(Fraction f)
 	return frac;
 }
 
+Fraction Exercises4::addFracc(Fraction f1, Fraction f2)
+{
+	Fraction newFrac;
+	newFrac.numerator = f1.numerator * f2.denominator + f2.numerator*f1.denominator;
+	newFrac.denominator = f1.denominator * f2.denominator;
+	newFrac = reduceFracc(newFrac);
+	return newFrac;
+}
+
+Fraction Exercises4::subFracc(Fraction f1, Fraction f2)
+{
+	Fraction newFrac;
+	newFrac.numerator = f1.numerator * f2.denominator - f2.numerator*f1.denominator;
+	newFrac.denominator = f1.denominator * f2.denominator;
+	newFrac = reduceFracc(newFrac);
+	return newFrac;
+}
+
+Fraction Exercises4::multFracc(Fraction f1, Fraction f2)
+{
+	Fraction newFrac;
+	newFrac.numerator = f1.numerator * f2.numerator;
+	newFrac.denominator = f1.denominator * f2.denominator;
+	newFrac = reduceFracc(newFrac);
+	return newFrac;
+}
+
+Fraction Exercises4::divFracc(Fraction f1, Fraction f2)
+{
+	Fraction newFrac;
+	newFrac.numerator = f1.numerator * f2.denominator;
+	newFrac.denominator = f1.denominator * f2.numerator;
+	newFrac = reduceFracc(newFrac);
+	return newFrac;
+}
+
 void Exercises4::readIntArray(int a[], int nElem)
 {
 	for (int i = 0; i < nElem; i++) {

@@ -19,6 +19,11 @@ public:
 	std::string normalizeName(std::string name);
 	Fraction readFracc();
 	Fraction reduceFracc(Fraction f);
+	Fraction addFracc(Fraction, Fraction);
+	Fraction subFracc(Fraction, Fraction);
+	Fraction multFracc(Fraction, Fraction);
+	Fraction divFracc(Fraction, Fraction);
+
 	void readIntArray(int a[], int nElem);
 	int searchValueInIntArray(const int a[], int nElem, int value);
 	int searchMultValuesInIntArray(const int a[], int nElem, int value, int index[]);

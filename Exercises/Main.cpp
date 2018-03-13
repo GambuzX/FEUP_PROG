@@ -11,8 +11,9 @@ Exercises4 exercises;
 
 int main()
 {
-	Fraction frac = { 0,0 };
-	Fraction newFrac = exercises.reduceFracc(frac);
+	Fraction frac = { 2,3 };
+	Fraction frac2 = { 4,5 };
+	Fraction newFrac = exercises.multFracc(frac, frac2);
 	std::cout << newFrac.numerator << " / " << newFrac.denominator;
 
 	return 0;
