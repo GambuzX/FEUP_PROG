@@ -5,9 +5,9 @@
 
 #include <iostream>
 #include <string>
-#include "exercises.h"
+#include "Exercises4.h"
 
-Exercises exercises;
+Exercises4 exercises;
 
 int main()
 {

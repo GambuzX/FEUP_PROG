@@ -1,42 +1,9 @@
 #pragma once
 
-class Exercises
+class Exercises3
 {
+
 public:
-	//Chapter 1
-	void intro_exe();
-	void exe1_1();
-	void exe1_2();
-	void exe1_3();
-	void exe1_4();
-	void exe1_5();
-	float exe1_6();
-
-	//Chapter 2
-	void exe2_2_a();
-	void exe2_2_b();
-	void exe2_2_c();
-	void exe2_3();
-	void exe2_4();
-	void exe2_5();
-	void exe2_6_a();
-	bool isPrime(int number);
-	void exe2_6_b();
-	void exe2_6_c();
-	void exe2_7_a();
-	void exe2_7_b();
-	void exe2_9_a();
-	void exe2_9_b();
-	void exe2_9_c();
-	void exe2_10_a();
-	void exe2_10_b();
-	double exe2_11_a();
-	double exe2_11_b();
-	double exe2_11_c();
-	void exe2_13();
-	void exe2_14_a();
-	void exe2_14_b();
-
 	//Chapter 3
 	int exe3_8(int m, int n);
 	double distance(double x1, double y1, double x2, double y2);
@@ -61,19 +28,4 @@ public:
 	void writeTimetableYear(int year);
 	int recursiveEuclidesAlgorithm(int m, int n);
 	bool testEuclidesAlgorithm(int m, int n);
-
-	//Chapter 4
-	bool isHydroxide(char compound[]);
-	void testIsHydroxide();
-	bool sequenceSearch(std::string s, int nc, char c);
-	void decompose(std::string compound);
-	void testDecompose();
-	std::string normalizeName(std::string name);
-	void readIntArray(int a[], int nElem);
-	int searchValueInIntArray(const int a[], int nElem, int value);
-	int searchMultValuesInIntArray(const int a[], int nElem, int value, int index[]);
-
-private:
-
-
 };

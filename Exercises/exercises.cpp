@@ -5,12 +5,15 @@
 #include <algorithm> 
 #include <iomanip>
 #include <list>
-#include "exercises.h"
+#include "Exercises1.h"
+#include "Exercises2.h"
+#include "Exercises3.h"
+#include "Exercises4.h"
 
 using namespace std;
 
 
-void Exercises::intro_exe()
+void Exercises1::intro_exe()
 {
 	// variable declarations and initialization
 	int operand1, operand2, result, answer;
@@ -71,7 +74,7 @@ void Exercises::intro_exe()
 					cout << "EXCELLENT !!!\n";
 }
 
-void Exercises::exe1_1()
+void Exercises1::exe1_1()
 {
 	char letra;
 
@@ -80,7 +83,7 @@ void Exercises::exe1_1()
 	cout << (int)letra << endl;
 }
 
-void Exercises::exe1_2()
+void Exercises1::exe1_2()
 {
 	float a, b, c; //inicializar variáveis
 	float media;
@@ -97,7 +100,7 @@ void Exercises::exe1_2()
 	cout << "C-media = " << fixed << setprecision(3) << c - media << endl;
 }
 
-void Exercises::exe1_3()
+void Exercises1::exe1_3()
 {
 	double M, p, r; //initialize variables
 	const double pi = 3.1415; //pi
@@ -110,7 +113,7 @@ void Exercises::exe1_3()
 	cout << "Sphere's mass = " << M << " Kg" << endl;
 }
 
-void Exercises::exe1_4()
+void Exercises1::exe1_4()
 {
 	float x, y, a, b, c, d, e, f; //initialize variables
 
@@ -132,7 +135,7 @@ void Exercises::exe1_4()
 
 }
 
-void Exercises::exe1_5()
+void Exercises1::exe1_5()
 {
 
 	int hoursT1, minutesT1, secondsT1;
@@ -174,7 +177,7 @@ void Exercises::exe1_5()
 	}
 }
 
-float Exercises::exe1_6()
+float Exercises1::exe1_6()
 {
 	float x1, y1, x2, y2, x3, y3; //Coordenadas dos vertices
 	float a, b, c, s, area;
@@ -195,7 +198,7 @@ float Exercises::exe1_6()
 	return area;//Devolve a area
 }
 
-void Exercises::exe2_2_a()
+void Exercises2::exe2_2_a()
 {
 	float a, b, c;
 
@@ -207,7 +210,7 @@ void Exercises::exe2_2_a()
 	cout << "min = " << min(a, min(b, c)) << endl;
 }
 
-void Exercises::exe2_2_b()
+void Exercises2::exe2_2_b()
 {
 	float a, b, c;
 
@@ -226,7 +229,7 @@ void Exercises::exe2_2_b()
 	}
 }
 
-void Exercises::exe2_2_c()
+void Exercises2::exe2_2_c()
 {
 	double a, b, c;
 
@@ -261,7 +264,7 @@ void Exercises::exe2_2_c()
 	}
 }
 
-void Exercises::exe2_3()
+void Exercises2::exe2_3()
 {
 	double a, b, result;
 	char op;
@@ -286,7 +289,7 @@ void Exercises::exe2_3()
 	cout << " = " << result << endl;
 }
 
-void Exercises::exe2_4()
+void Exercises2::exe2_4()
 {
 	double weight, cost;
 
@@ -313,7 +316,7 @@ void Exercises::exe2_4()
 	cout << "Custo (euros) = " << cost << endl;
 }
 
-void Exercises::exe2_5()
+void Exercises2::exe2_5()
 {
 	int a, b, c;
 	double sign;
@@ -360,7 +363,7 @@ void Exercises::exe2_5()
 
 }
 
-void Exercises::exe2_6_a()
+void Exercises2::exe2_6_a()
 { //Determines if a number is prime or not
 	int number;
 	float prime = true;
@@ -399,7 +402,7 @@ void Exercises::exe2_6_a()
 	}
 }
 
-bool Exercises::isPrime(int number)  //Determines if a number is prime or not
+bool Exercises2::isPrime(int number)  //Determines if a number is prime or not
 {
 	float prime = true;
 
@@ -430,7 +433,7 @@ bool Exercises::isPrime(int number)  //Determines if a number is prime or not
 		return false;
 }
 
-void Exercises::exe2_6_b()
+void Exercises2::exe2_6_b()
 {
 	int primeCount = 0;
 	int number = 1;
@@ -446,7 +449,7 @@ void Exercises::exe2_6_b()
 	cout << endl;
 }
 
-void Exercises::exe2_6_c()
+void Exercises2::exe2_6_c()
 {
 	for (int i = 1; i < 10000; i++) {
 		if (isPrime(i))
@@ -455,7 +458,7 @@ void Exercises::exe2_6_c()
 	cout << endl;
 }
 
-void Exercises::exe2_7_a()
+void Exercises2::exe2_7_a()
 {
 	cout << "ang     " << "sen       " << "cos       " << "tan   " << endl;
 
@@ -478,7 +481,7 @@ void Exercises::exe2_7_a()
 	}
 }
 
-void Exercises::exe2_7_b()
+void Exercises2::exe2_7_b()
 {
 
 	float lowerLimit, upperLimit, step; // Variables for user input
@@ -509,7 +512,7 @@ void Exercises::exe2_7_b()
 	}
 }
 
-void Exercises::exe2_9_a()
+void Exercises2::exe2_9_a()
 {
 	list<int> numbers = list<int>();
 	int a; //variavel para guardar inputs
@@ -555,7 +558,7 @@ void Exercises::exe2_9_a()
 	return;
 }
 
-void Exercises::exe2_9_b()
+void Exercises2::exe2_9_b()
 {
 	int numElem, soma = 0, min, max, comp;
 	double media;
@@ -597,7 +600,7 @@ void Exercises::exe2_9_b()
 	return;
 }
 
-void Exercises::exe2_9_c()
+void Exercises2::exe2_9_c()
 {
 	int numElem = 0, soma = 0, min, max;
 	double media;
@@ -642,7 +645,7 @@ void Exercises::exe2_9_c()
 	return;
 }
 
-void Exercises::exe2_10_a()
+void Exercises2::exe2_10_a()
 {
 	int number, firstDigit, lastDigit;
 	bool capicua = false;
@@ -669,7 +672,7 @@ void Exercises::exe2_10_a()
 	return;
 }
 
-void Exercises::exe2_10_b()
+void Exercises2::exe2_10_b()
 {
 	int number;
 	bool capicua = true;
@@ -699,7 +702,7 @@ void Exercises::exe2_10_b()
 	return;
 }
 
-double Exercises::exe2_11_a() //serie que devolve o valor de pi
+double Exercises2::exe2_11_a() //serie que devolve o valor de pi
 {
 	int n;
 	cout << "n? ";
@@ -724,7 +727,7 @@ double Exercises::exe2_11_a() //serie que devolve o valor de pi
 	return total;
 }
 
-double Exercises::exe2_11_b() //serie que devolve o valor do numero de Neper
+double Exercises2::exe2_11_b() //serie que devolve o valor do numero de Neper
 {
 	int n;
 	cout << "n? ";
@@ -742,7 +745,7 @@ double Exercises::exe2_11_b() //serie que devolve o valor do numero de Neper
 	return total;
 }
 
-double Exercises::exe2_11_c() //serie que devolve o valor de pi
+double Exercises2::exe2_11_c() //serie que devolve o valor de pi
 {
 	int n, x;
 	cout << "n? ";
@@ -772,7 +775,7 @@ double Exercises::exe2_11_c() //serie que devolve o valor de pi
 	return total;
 }
 
-void Exercises::exe2_13()
+void Exercises2::exe2_13()
 {
 	list<int> numbers = list<int>();
 	int number, fixedNumber;
@@ -812,7 +815,7 @@ void Exercises::exe2_13()
 	return;
 }
 
-void Exercises::exe2_14_a()
+void Exercises2::exe2_14_a()
 {
 	int numero, nMaxIter;
 	double delta;
@@ -836,7 +839,7 @@ void Exercises::exe2_14_a()
 
 }
 
-void Exercises::exe2_14_b()
+void Exercises2::exe2_14_b()
 {
 	int numero, nMaxIter;
 	double delta;
@@ -863,7 +866,7 @@ void Exercises::exe2_14_b()
 
 }
 
-int Exercises::exe3_8(int m, int n)
+int Exercises3::exe3_8(int m, int n)
 { // Algoritmo de euclides
 
 	if (m % n == 0) { // Se n for divisor de m
@@ -874,12 +877,12 @@ int Exercises::exe3_8(int m, int n)
 	}
 }
 
-double Exercises::distance(double x1, double y1, double x2, double y2)
+double Exercises3::distance(double x1, double y1, double x2, double y2)
 {
 	return sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
 }
 
-double Exercises::area(double x1, double y1, double x2, double y2, double x3, double y3)
+double Exercises3::area(double x1, double y1, double x2, double y2, double x3, double y3)
 {
 	double a,b,c,s,total;
 	a = distance(x1, y1, x2, y2);
@@ -890,7 +893,7 @@ double Exercises::area(double x1, double y1, double x2, double y2, double x3, do
 	return total;
 }
 
-double Exercises::round(double x, unsigned n)
+double Exercises3::round(double x, unsigned n)
 {
 	double y;
 	double mult = pow(10,n);
@@ -900,7 +903,7 @@ double Exercises::round(double x, unsigned n)
 	return y;
 }
 
-void Exercises::testRound()
+void Exercises3::testRound()
 {
 	double x;
 	unsigned n;
@@ -911,7 +914,7 @@ void Exercises::testRound()
 	cout << "Rounded value = " << fixed << setprecision (n) << round(x, n);
 }
 
-bool Exercises::readFracc(int & numerator, int & denominator)
+bool Exercises3::readFracc(int & numerator, int & denominator)
 {
 	char bar; // Char to hold the bar between the numbers, so as not to trigger the error flag
 	cin >> numerator >> bar >> denominator; // Keeps the input values
@@ -925,12 +928,12 @@ bool Exercises::readFracc(int & numerator, int & denominator)
 	}
 }
 
-void Exercises::writeFracc(int numerator, int denominator)
+void Exercises3::writeFracc(int numerator, int denominator)
 {
 	cout << numerator << '/' << denominator << endl;
 }
 
-int Exercises::gcd(int a, int b)
+int Exercises3::gcd(int a, int b)
 {
 	int q = 0;
 	int r = 0;
@@ -950,14 +953,14 @@ int Exercises::gcd(int a, int b)
 
 }
 
-void Exercises::reduceFracc(int & numerator, int & denominator)
+void Exercises3::reduceFracc(int & numerator, int & denominator)
 {
 	int mdc = gcd(numerator, denominator);
 	numerator = numerator / mdc;
 	denominator = denominator / mdc;
 }
 
-double Exercises::addFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+double Exercises3::addFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
 {
 	int tempNumerator2 = numerator2 * denominator1;
 	numerator1 = numerator1 * denominator2 + tempNumerator2;
@@ -967,7 +970,7 @@ double Exercises::addFracc(int & numerator1, int & denominator1, int  numerator2
 
 }
 
-double Exercises::subFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+double Exercises3::subFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
 {
 	int tempNumerator2 = numerator2 * denominator1;
 	numerator1 = numerator1 * denominator2 - tempNumerator2;
@@ -976,7 +979,7 @@ double Exercises::subFracc(int & numerator1, int & denominator1, int  numerator2
 	return (double)numerator1 / denominator1;
 }
 
-double Exercises::multFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+double Exercises3::multFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
 {
 	numerator1 = numerator1 * numerator2;
 	denominator1 = denominator1 * denominator2;
@@ -984,7 +987,7 @@ double Exercises::multFracc(int & numerator1, int & denominator1, int  numerator
 	return (double)numerator1 / denominator1;
 }
 
-double Exercises::divFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
+double Exercises3::divFracc(int & numerator1, int & denominator1, int  numerator2, int  denominator2)
 {
 	numerator1 = numerator1 * denominator2;
 	denominator1 = denominator1 * numerator2;
@@ -992,7 +995,7 @@ double Exercises::divFracc(int & numerator1, int & denominator1, int  numerator2
 	return (double)numerator1 / denominator1;
 }
 
-bool Exercises::testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2)
+bool Exercises3::testFraccOps(int numerator1, int denominator1, int numerator2, int denominator2)
 {
 	// Function for testing the previously defined functions
 	// Compares the results from those functions with the direct calculation of the operations
@@ -1031,7 +1034,7 @@ bool Exercises::testFraccOps(int numerator1, int denominator1, int numerator2, i
 	return (abs(sum - sumFunct) < delta) && (abs(dif - difFunct) < delta) && (abs(mult - multFunct) < delta) && (abs(div - divFunct) < delta);
 }
 
-bool Exercises::isLeapYear(int year)
+bool Exercises3::isLeapYear(int year)
 {
 	// Returns a boolean representing whether or not the year is a Leap Year
 	bool bLeapYear;
@@ -1046,7 +1049,7 @@ bool Exercises::isLeapYear(int year)
 	return bLeapYear;
 }
 
-int Exercises::daysInMonthOfYear(int month, int year)
+int Exercises3::daysInMonthOfYear(int month, int year)
 {
 	//returns the number of days of the specified month in the specified year
 	bool leapYear = isLeapYear(year);
@@ -1073,7 +1076,7 @@ int Exercises::daysInMonthOfYear(int month, int year)
 	}
 }
 
-int Exercises::weekDay(int day, int month, int year)
+int Exercises3::weekDay(int day, int month, int year)
 {
 	bool leapYear = isLeapYear(year);
 
@@ -1120,7 +1123,7 @@ int Exercises::weekDay(int day, int month, int year)
 	return ds;
 }
 
-void Exercises::writeWeekDay(int day, int month, int year)
+void Exercises3::writeWeekDay(int day, int month, int year)
 {
 	day = weekDay(day, month, year);
 
@@ -1153,7 +1156,7 @@ void Exercises::writeWeekDay(int day, int month, int year)
 	return;
 }
 
-void Exercises::writeMonth(int month)
+void Exercises3::writeMonth(int month)
 {
 	switch (month) {
 	case 1:
@@ -1196,7 +1199,7 @@ void Exercises::writeMonth(int month)
 	return;
 }
 
-void Exercises::writeTimetableMonthInYear(int month, int year)
+void Exercises3::writeTimetableMonthInYear(int month, int year)
 {
 	int totalDays = daysInMonthOfYear(month, year);
 	int dayOfWeek = weekDay(1, month, year);
@@ -1275,7 +1278,7 @@ void Exercises::writeTimetableMonthInYear(int month, int year)
 	return;
 }
 
-void Exercises::writeTimetableYear(int year)
+void Exercises3::writeTimetableYear(int year)
 {
 	for (int month = 1; month <= 12; month++) {
 		writeTimetableMonthInYear(month, year);
@@ -1284,7 +1287,7 @@ void Exercises::writeTimetableYear(int year)
 	return;
 }
 
-int Exercises::recursiveEuclidesAlgorithm(int m, int n)
+int Exercises3::recursiveEuclidesAlgorithm(int m, int n)
 {
 	if (m % n == 0)
 		return n;
@@ -1293,19 +1296,19 @@ int Exercises::recursiveEuclidesAlgorithm(int m, int n)
 	return 1;
 }
 
-bool Exercises::testEuclidesAlgorithm(int m, int n)
+bool Exercises3::testEuclidesAlgorithm(int m, int n)
 {
 	int gdc = recursiveEuclidesAlgorithm(m, n);
 	return (m % gdc == 0) && (n % gdc == 0) && (recursiveEuclidesAlgorithm(m, gdc) % n != 0) && (recursiveEuclidesAlgorithm(n, gdc) % m != 0);
 }
 
-bool Exercises::isHydroxide(char compound[])
+bool Exercises4::isHydroxide(char compound[])
 {
 	int length = strlen(compound);
 	return (compound[length - 2] == 'O') && (compound[length - 1] == 'H');
 }
 
-void Exercises::testIsHydroxide()
+void Exercises4::testIsHydroxide()
 {
 	char koh[] = "KOH";
 	cout << "Is KOH an Hydroxide? " << isHydroxide(koh) << endl;
@@ -1328,7 +1331,7 @@ void Exercises::testIsHydroxide()
 	return;
 }
 
-bool Exercises::sequenceSearch(string s, int nc, char c)
+bool Exercises4::sequenceSearch(string s, int nc, char c)
 {
 	bool hasSequence = false;
 	for (int i = 0; i < s.length(); i++) {
@@ -1350,7 +1353,7 @@ bool Exercises::sequenceSearch(string s, int nc, char c)
 	return hasSequence;
 }
 
-void Exercises::decompose(string compound)
+void Exercises4::decompose(string compound)
 {
 	cout << "O composto quimico " << compound << " tem como elementos ";
 	int length = compound.length();
@@ -1369,7 +1372,7 @@ void Exercises::decompose(string compound)
 	return;
 }
 
-void Exercises::testDecompose()
+void Exercises4::testDecompose()
 {
 	decompose("H2O");
 	decompose("KOH");
@@ -1381,7 +1384,7 @@ void Exercises::testDecompose()
 	return;
 }
 
-string Exercises::normalizeName(string name)
+string Exercises4::normalizeName(string name)
 {
 	string normalizedName = "";
 	string particlesToRemove[] = { "DE","DO", "DA", "DAS", "DOS", "E" };
@@ -1424,7 +1427,7 @@ string Exercises::normalizeName(string name)
 	return normalizedName;
 }
 
-void Exercises::readIntArray(int a[], int nElem)
+void Exercises4::readIntArray(int a[], int nElem)
 {
 	for (int i = 0; i < nElem; i++) {
 		cout << "Elemento numero " << i + 1 << "? ";
@@ -1432,7 +1435,7 @@ void Exercises::readIntArray(int a[], int nElem)
 	}
 }
 
-int Exercises::searchValueInIntArray(const int a[], int nElem, int value)
+int Exercises4::searchValueInIntArray(const int a[], int nElem, int value)
 {
 	for (int i = 0; i < nElem; i++) {
 		if (a[i] == value)
@@ -1442,7 +1445,7 @@ int Exercises::searchValueInIntArray(const int a[], int nElem, int value)
 	return -1;
 }
 
-int Exercises::searchMultValuesInIntArray(const int a[], int nElem, int value, int index[])
+int Exercises4::searchMultValuesInIntArray(const int a[], int nElem, int value, int index[])
 {
 	int numberOfElements = 0;
 	int indexArrayIndex = 0;
