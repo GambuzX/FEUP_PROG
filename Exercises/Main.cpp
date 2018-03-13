@@ -12,7 +12,7 @@ Exercises3 exercises;
 
 int main()
 {
-	long int fatorial = exercises.factorial_ite(20);
+	long int fatorial = exercises.factorial_rec(5);
 
 	std::cout << "O numero maximo representavel e " << LONG_MAX << std::endl;
 	std::cout << fatorial << std::endl;

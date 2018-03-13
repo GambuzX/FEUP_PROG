@@ -1298,6 +1298,18 @@ long int Exercises3::factorial_ite(int n)
 	return total;
 }
 
+long int Exercises3::factorial_rec(int n)
+{
+	long int total = n;
+	if (n == 1)
+		return 1;
+	else
+		total = total * factorial_rec(n - 1);
+
+	return total;
+
+}
+
 int Exercises3::recursiveEuclidesAlgorithm(int m, int n)
 {
 	if (m % n == 0)
