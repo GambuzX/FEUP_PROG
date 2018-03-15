@@ -5,29 +5,22 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include "Exercises1.h"
+#include "Exercises2.h"
 #include "Exercises3.h"
-#include <climits>
+#include "Exercises4.h"
 
-Exercises3 exercises;
-double h(double);
+Exercises4 exercises;
 
 int main()
 {
-	//integrateTR(double f(double), double a, double b, int n)
+	std::vector<int> vetor(5);
+	exercises.readIntVector(vetor, 5);
 
-	std::cout << exercises.integrateTR(h, -2, 2, 2) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 4) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 8) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 16) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 32) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 64) << std::endl;
-	std::cout << exercises.integrateTR(h, -2, 2, 128) << std::endl;
+	std::vector<int> indexes = exercises.searchMultValuesInIntVector(vetor, 12);
 
-	return 0;
+	for (int i = 0; i < indexes.size(); i++)
+		std::cout << indexes.at(i) << std::endl;
 
-}
-
-double h(double x)
-{
-	return sqrt(4 - x * x);
 }

@@ -5,6 +5,8 @@
 #include <algorithm> 
 #include <iomanip>
 #include <list>
+#include <vector>
+
 #include "Exercises1.h"
 #include "Exercises2.h"
 #include "Exercises3.h"
@@ -1558,6 +1560,36 @@ int Exercises4::searchMultValuesInIntArray(const int a[], int nElem, int value, 
 		}
 	}
 	return numberOfElements;
+}
+
+void Exercises4::readIntVector(vector<int>& v, int nElem)
+{
+	for (int i = 0; i < nElem; i++) {
+		cout << "Elemento numero " << i + 1 << "? ";
+		cin >> v.at(i);
+	}
+
+	return;
+}
+
+int Exercises4::searchValueInVector(const vector<int>& v, int value)
+{
+	for (int i = 0; i < v.size(); i++) {
+		if (v.at(i) == value)
+			return i;
+	}
+	return -1; //if the value is not found, return -1
+}
+
+vector<int> Exercises4::searchMultValuesInIntVector(const vector<int>& v, int value)
+{
+	vector<int> indexes;
+
+	for (int i = 0; i < v.size(); i++) {
+		if (v.at(i) == value)
+			indexes.push_back(i);
+	}
+	return indexes;
 }
 
 
