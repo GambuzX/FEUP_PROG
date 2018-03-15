@@ -1592,6 +1592,32 @@ vector<int> Exercises4::searchMultValuesInIntVector(const vector<int>& v, int va
 	return indexes;
 }
 
+std::vector<int> Exercises4::readIntVector()
+{
+	vector<int> outputVector;
+	int index = 0;
+	int placeholder;
+
+	do {
+		cout << "Elemento numero " << index + 1 << "? ";
+		cin >> placeholder;
+
+		if (cin) {
+			outputVector.push_back(placeholder);
+			index++;
+		}
+		else {
+			if (cin.eof())
+				break;
+			cin.clear();
+			cin.ignore(100000, '\n');
+		}
+	} while (true);
+	
+	return outputVector;
+
+}
+
 
 
 

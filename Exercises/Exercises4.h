@@ -36,5 +36,6 @@ public:
 	void readIntVector(std::vector<int> &v, int nElem);
 	int searchValueInVector(const std::vector<int> &v, int value);
 	std::vector<int> searchMultValuesInIntVector(const std::vector<int> &v, int value);
+	std::vector<int> readIntVector();
 
 };

@@ -15,12 +15,7 @@ Exercises4 exercises;
 
 int main()
 {
-	std::vector<int> vetor(5);
-	exercises.readIntVector(vetor, 5);
 
-	std::vector<int> indexes = exercises.searchMultValuesInIntVector(vetor, 12);
-
-	for (int i = 0; i < indexes.size(); i++)
-		std::cout << indexes.at(i) << std::endl;
+	exercises.readIntVector();
 
 }
