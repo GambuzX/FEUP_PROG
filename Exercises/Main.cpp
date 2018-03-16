@@ -11,11 +11,21 @@
 #include "Exercises3.h"
 #include "Exercises4.h"
 
-Exercises4 exercises;
+using namespace std;
 
 int main()
 {
+	vector<string> vetor = { "b", "z", "x","k","l","k","a"};
 
-	exercises.readIntVector();
+	for (int i = 0; i < vetor.size(); i++)
+		cout << "Elemento " << i + 1 << " = " << vetor.at(i) << endl;
+
+	bubblesort(vetor);
+
+	cout << endl;
+
+	for (int i = 0; i < vetor.size(); i++)
+		cout << "Elemento " << i + 1 << " = " << vetor.at(i) << endl;
+
 
 }
