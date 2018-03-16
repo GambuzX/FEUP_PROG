@@ -1371,7 +1371,7 @@ void testIsHydroxide()
 bool sequenceSearch(string s, int nc, char c)
 {
 	bool hasSequence = false;
-	for (int i = 0; i < s.length(); i++) {
+	for (unsigned i = 0; i < s.length(); i++) {
 		if (s[i] == c) {
 			for (int j = 0; j < nc; j++) {
 				if (s[i + j] == c) {
@@ -1573,7 +1573,7 @@ void readIntVector(vector<int>& v, int nElem)
 
 int searchValueInVector(const vector<int>& v, int value)
 {
-	for (int i = 0; i < v.size(); i++) {
+	for (unsigned i = 0; i < v.size(); i++) {
 		if (v.at(i) == value)
 			return i;
 	}
@@ -1584,7 +1584,7 @@ vector<int> searchMultValuesInIntVector(const vector<int>& v, int value)
 {
 	vector<int> indexes;
 
-	for (int i = 0; i < v.size(); i++) {
+	for (unsigned i = 0; i < v.size(); i++) {
 		if (v.at(i) == value)
 			indexes.push_back(i);
 	}
@@ -1622,7 +1622,7 @@ void bubblesort(vector<string>& v)
 	unsigned iterations = v.size() - 1;
 
 	while (iterations > 0) {
-		for (int i = 0; i < iterations; i++) {
+		for (unsigned i = 0; i < iterations; i++) {
 			if (v.at(i) > v.at(i + 1)) {
 				string temp = v.at(i + 1);
 				v.at(i + 1) = v.at(i);
@@ -1632,6 +1632,38 @@ void bubblesort(vector<string>& v)
 		iterations--;
 	}
 	return;
+}
+
+int binarySearch(const vector<string>& v, string value)
+{
+	int bottom, middle, top;
+	bottom = 0;
+	top = v.size() - 1;
+	bool found = false;
+
+	while (top > bottom && !found) {
+		middle = (top + bottom) / 2;
+		if (v.at(middle) == value) {
+			found = true;
+		}
+		else {
+			if (v.at(middle) < value) {
+				bottom = middle + 1;
+			}
+			else {
+				top = middle - 1;
+			}
+		}
+	}
+
+	if (v.at(bottom) == value)
+		return bottom;
+	else if (v.at(top) == value)
+		return top;
+	else if (v.at(middle) == value)
+		return middle;
+
+	return -1;
 }
 
 

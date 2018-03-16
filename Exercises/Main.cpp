@@ -17,15 +17,12 @@ int main()
 {
 	vector<string> vetor = { "b", "z", "x","k","l","k","a"};
 
-	for (int i = 0; i < vetor.size(); i++)
-		cout << "Elemento " << i + 1 << " = " << vetor.at(i) << endl;
-
 	bubblesort(vetor);
+
+	for (int i = 0; i < vetor.size(); i++)
+		cout << vetor.at(i) << "  ";
 
 	cout << endl;
 
-	for (int i = 0; i < vetor.size(); i++)
-		cout << "Elemento " << i + 1 << " = " << vetor.at(i) << endl;
-
-
+	cout << binarySearch(vetor, "l");
 }

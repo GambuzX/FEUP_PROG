@@ -37,3 +37,4 @@ std::vector<int> searchMultValuesInIntVector(const std::vector<int> &v, int valu
 std::vector<int> readIntVector();
 
 void bubblesort(std::vector<std::string> &v);
+int binarySearch(const std::vector<std::string> &v, std::string value);
