@@ -1,2 +1,2 @@
-# PROG-17-18
+# PROG_2018
 Solved exercises from programming classes
