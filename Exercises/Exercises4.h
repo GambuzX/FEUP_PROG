@@ -38,3 +38,5 @@ std::vector<int> readIntVector();
 
 void bubblesort(std::vector<std::string> &v);
 int binarySearch(const std::vector<std::string> &v, std::string value);
+void RemoveDuplicates(std::vector<int> &v);
+void RemoveDuplicateWords(std::vector<std::string>& v);

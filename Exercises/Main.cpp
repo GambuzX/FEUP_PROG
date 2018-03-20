@@ -15,14 +15,14 @@ using namespace std;
 
 int main()
 {
-	vector<string> vetor = { "b", "z", "x","k","l","k","a"};
+	vector<string> vetor = { "b", "b", "b", "z", "z", "x","k","l","k","a"};
 
-	bubblesort(vetor);
+	RemoveDuplicateWords(vetor);
 
 	for (int i = 0; i < vetor.size(); i++)
-		cout << vetor.at(i) << "  ";
+	{
+		cout << vetor.at(i) << " ";
+	}
 
-	cout << endl;
-
-	cout << binarySearch(vetor, "l");
+	return 0;
 }

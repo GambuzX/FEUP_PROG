@@ -1666,6 +1666,44 @@ int binarySearch(const vector<string>& v, string value)
 	return -1;
 }
 
+void RemoveDuplicates(std::vector<int>& v)
+{
+	unsigned length = v.size();
+	unsigned index = 0;
+	
+	while (index < v.size())
+	{
+		if (index < v.size() - 1) //if it is not the last element
+		{
+			if (v.at(index) == v.at(index + 1))
+			{
+			}
+		}
+	}
+	
+	
+	return;
+}
+
+void RemoveDuplicateWords(std::vector<string>& v)
+{
+	unsigned length = v.size();
+	unsigned index = 0;
+
+	while (index < v.size()-1)
+	{
+		if (v.at(index) == v.at(index + 1))
+		{
+			v.erase(v.begin()+index);
+		}
+		else
+		{
+			index++;
+		}
+	}
+	return;
+}
+
 
 
 
