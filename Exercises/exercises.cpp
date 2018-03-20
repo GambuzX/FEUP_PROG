@@ -1668,20 +1668,23 @@ int binarySearch(const vector<string>& v, string value)
 
 void RemoveDuplicates(std::vector<int>& v)
 {
-	unsigned length = v.size();
 	unsigned index = 0;
 	
-	while (index < v.size())
+	while (index < v.size()-1)
 	{
-		if (index < v.size() - 1) //if it is not the last element
+		if (v.at(index) == v.at(index + 1))
 		{
-			if (v.at(index) == v.at(index + 1))
+			for (int i = index; i < v.size()-1; i++)
 			{
+				v.at(i) = v.at(i + 1); //shift elements to the left				
 			}
+			v.resize(v.size() - 1); //decrement the size by one
 		}
-	}
-	
-	
+		else
+		{
+			index++;
+		}
+	}	
 	return;
 }
 

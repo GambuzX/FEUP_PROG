@@ -15,13 +15,13 @@ using namespace std;
 
 int main()
 {
-	vector<string> vetor = { "b", "b", "b", "z", "z", "x","k","l","k","a"};
+	vector<int> numbers = { 1,2,2,2,2,2,2,3,4,5,6,6,7,12342,3423,23,43,12,12,12,12,12 };
 
-	RemoveDuplicateWords(vetor);
+	RemoveDuplicates(numbers);
 
-	for (int i = 0; i < vetor.size(); i++)
+	for (int i = 0; i < numbers.size(); i++)
 	{
-		cout << vetor.at(i) << " ";
+		cout << numbers.at(i) << " ";
 	}
 
 	return 0;
