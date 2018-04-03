@@ -15,14 +15,7 @@ using namespace std;
 
 int main()
 {
-	vector<int> numbers = { 1,2,2,2,2,2,2,3,4,5,6,6,7,12342,3423,23,43,12,12,12,12,12 };
-
-	RemoveDuplicates(numbers);
-
-	for (int i = 0; i < numbers.size(); i++)
-	{
-		cout << numbers.at(i) << " ";
-	}
+	SortNamesToFile("names.txt");
 
 	return 0;
 }

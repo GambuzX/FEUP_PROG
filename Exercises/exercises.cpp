@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <list>
 #include <vector>
+#include <fstream>
 
 #include "Exercises1.h"
 #include "Exercises2.h"
@@ -1704,6 +1705,41 @@ void RemoveDuplicateWords(std::vector<string>& v)
 			index++;
 		}
 	}
+	return;
+}
+
+void SortNamesToFile(std::string fileName)
+{
+	ifstream file(fileName);
+
+	if (!file.is_open())
+	{
+		cout << "File does not exist!\n";
+		exit(1);
+	}
+
+	vector<string> names;
+	string personName;
+	while (getline(file, personName))
+	{
+		names.push_back(personName);
+	}
+
+	file.close();
+
+	bubblesort(names);
+
+	string sortedFileName = fileName.append("_sorted.txt");
+	ofstream output(sortedFileName);
+
+	for (int i = 0; i < names.size(); i++)
+	{
+		output << names.at(i);
+		if (i < names.size() - 1)
+			output << '\n';
+	}
+	output.close();
+
 	return;
 }
 
