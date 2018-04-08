@@ -6,13 +6,13 @@
 using namespace std;
 int main()
 {
-	const char ENTER = 13;
-	char ch;
-	cout << "chars (end with Z) ? \n";
-	do {
-		ch = _getch(); //note: returns 13 (CARRIAGE RETURN) when ENTER key is typed
-					   // TRY: cin.get()
-		cout << ch << "-" << unsigned(ch) << endl;
-	} while (ch != 'Z');
+	int a = 12;
+	int &b = a;
+
+	cout << "a: " << a << endl;
+	cout << "&a: " << &a << endl;
+	cout << "b: " << b << endl;
+	cout << "&b: " << &b << endl;
+
 	return 0;
 }
