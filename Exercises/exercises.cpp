@@ -7,6 +7,7 @@
 #include <list>
 #include <vector>
 #include <fstream>
+#include <sstream>
 
 #include "Exercises1.h"
 #include "Exercises2.h"
@@ -1741,6 +1742,34 @@ void SortNamesToFile(std::string fileName)
 	output.close();
 
 	return;
+}
+
+double executeOperation(string op)
+{
+	double result, op1, op2;
+	char operation;
+	istringstream isstring(op);
+	isstring >> op1 >> operation >> op2;
+
+	switch (operation) {
+	case '+':
+		result = op1 + op2;
+		break;
+	case '-':
+		result = op1 - op2;
+		break;
+	case '*':
+		result = op1 * op2;
+		break;
+	case '/':
+		result = op1 / op2;
+		break;
+	default:
+		result = 0;
+		cout << "Invalid operation!\n";	
+	}
+
+	return result;
 }
 
 

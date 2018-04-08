@@ -4,6 +4,7 @@
 */
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <vector>
 #include "Exercises1.h"
@@ -15,7 +16,9 @@ using namespace std;
 
 int main()
 {
-	SortNamesToFile("names.txt");
+	double result = executeOperation("49/12");
+
+	cout << fixed << setprecision(2) << result << endl;
 
 	return 0;
 }

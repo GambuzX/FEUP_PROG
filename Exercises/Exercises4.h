@@ -41,4 +41,6 @@ int binarySearch(const std::vector<std::string> &v, std::string value);
 void RemoveDuplicates(std::vector<int> &v);
 void RemoveDuplicateWords(std::vector<std::string>& v);
 
+double executeOperation(std::string op);
+
 void SortNamesToFile(std::string);
