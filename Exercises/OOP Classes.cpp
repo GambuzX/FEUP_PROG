@@ -80,6 +80,50 @@ bool Date::isValid()
 	return (day > 0 && day <= daysInMonthOfYear(month, year));
 }
 
+bool Date::isEqualTo(Date & date) const
+{
+	if (day != date.getDay()) return false;
+	if (month != date.getMonth()) return false;
+	if (year != date.getYear()) return false;
+	return true;
+}
+
+bool Date::isNotEqualTo(Date & date) const
+{
+	if (day != date.getDay()) return true;
+	if (month != date.getMonth()) return true;
+	if (year != date.getYear()) return true;
+	return false;
+}
+
+bool Date::isAfter(Date & date) const
+{
+	if (year > date.getYear()) return true;
+	if (year < date.getYear()) return false;
+
+	//same year
+	if (month > date.getMonth()) return true;
+	if (month < date.getMonth()) return false;
+
+	//same year and same month
+	if (day > date.getDay()) return true;
+	else return false;
+}
+
+bool Date::isBefore(Date & date) const
+{
+	if (year > date.getYear()) return false;
+	if (year < date.getYear()) return true;
+
+	//same year
+	if (month > date.getMonth()) return false;
+	if (month < date.getMonth()) return true;
+
+	//same year and same month
+	if (day >= date.getDay()) return false;
+	else return true;
+}
+
 bool Date::isLeapYear(int year)
 {
 	// Returns a boolean representing whether or not the year is a Leap Year

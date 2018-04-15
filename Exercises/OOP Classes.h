@@ -18,6 +18,11 @@ public:
 	std::string getDate(); // returns the date in format "yyyy/mm/dd"
 	void show(); // shows the date on the screen in format "yyyy/mm/dd"
 	bool isValid(); //returns a boolean value indicating whether the date is valid or not
+	bool isEqualTo(Date &date) const;
+	bool isNotEqualTo(Date &date) const;
+	bool isAfter(Date &date) const;
+	bool isBefore(Date &date) const;
+
 private:
 	unsigned int year;
 	unsigned int month;
