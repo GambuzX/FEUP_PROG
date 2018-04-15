@@ -7,18 +7,21 @@
 #include <iomanip>
 #include <string>
 #include <vector>
-#include "Exercises1.h"
-#include "Exercises2.h"
-#include "Exercises3.h"
-#include "Exercises4.h"
+#include "OOP Classes.h"
 
 using namespace std;
 
 int main()
 {
-	double result = executeOperation("49/12");
+	Date date(1999, 3, 26);
+	date.show();
+	cout << date.isValid() << endl;
 
-	cout << fixed << setprecision(2) << result << endl;
+	date.setYear(2017);
+	date.setMonth(2);
+	date.setDay(29);
+	date.show();
+	cout << date.isValid() << endl;
 
 	return 0;
 }

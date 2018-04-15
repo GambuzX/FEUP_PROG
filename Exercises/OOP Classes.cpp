@@ -73,4 +73,54 @@ void Date::show()
 	cout << getDate() << endl;
 }
 
+bool Date::isValid()
+{
+	if (year <= 0) return false;
+	if (month <= 0 || month > 12) return false;
+	return (day > 0 && day <= daysInMonthOfYear(month, year));
+}
+
+bool Date::isLeapYear(int year)
+{
+	// Returns a boolean representing whether or not the year is a Leap Year
+	bool bLeapYear;
+
+	if (year % 400 == 0) //divisivel por 400
+		bLeapYear = true;
+	else if (year % 100 != 0 && year % 4 == 0) //divisivel por 4, mas não por 100
+		bLeapYear = true;
+	else
+		bLeapYear = false;
+
+	return bLeapYear;
+}
+
+int Date::daysInMonthOfYear(int month, int year)
+{
+	//returns the number of days of the specified month in the specified year
+	bool leapYear = isLeapYear(year);
+
+	switch (month)
+	{
+	case 1:	return 31;
+	case 2:	if (leapYear)
+		return 29;
+			else
+				return 28;
+	case 3: return 31;
+	case 4: return 30;
+	case 5: return 31;
+	case 6: return 30;
+	case 7: return 31;
+	case 8: return 31;
+	case 9: return 30;
+	case 10: return 31;
+	case 11: return 30;
+	case 12: return 31;
+
+	default:
+		return 0;
+	}
+}
+
 

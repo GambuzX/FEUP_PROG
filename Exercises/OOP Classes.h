@@ -17,10 +17,14 @@ public:
 	unsigned int getDay();
 	std::string getDate(); // returns the date in format "yyyy/mm/dd"
 	void show(); // shows the date on the screen in format "yyyy/mm/dd"
+	bool isValid(); //returns a boolean value indicating whether the date is valid or not
 private:
 	unsigned int year;
 	unsigned int month;
 	unsigned int day;
+
+	bool isLeapYear(int year);
+	int daysInMonthOfYear(int month, int year);	
 };
 
 
