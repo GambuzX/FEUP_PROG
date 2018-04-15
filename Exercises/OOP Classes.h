@@ -6,6 +6,7 @@
 class Date
 {
 public:
+	Date(); // default constructor based on current date
 	Date(unsigned int year, unsigned int month, unsigned int day);
 	Date(std::string yearMonthDay); // yearMonthDay must be in format "yyyy/mm/dd"
 	void setYear(unsigned int year);

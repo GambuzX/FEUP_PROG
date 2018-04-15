@@ -1,7 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <sstream>
+#include <ctime>
+#include <chrono>
 #include "OOP Classes.h"
 
 using namespace std;
@@ -9,6 +13,31 @@ using namespace std;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                    DATE                                                          //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Date::Date()
+{
+	auto currentT = std::chrono::system_clock::now();
+	std::time_t currentTime = std::chrono::system_clock::to_time_t(currentT);
+	string time = ctime(&currentTime); // Format: Www Mmm dd hh:mm:ss yyyys
+
+	istringstream iss(time);
+	string thrash, monthString;
+
+	iss >> thrash >> monthString >> day >> thrash >> year;
+
+	if (monthString == "Jan") month = 1;
+	else if (monthString == "Feb") month = 2;
+	else if (monthString == "Mar") month = 3;
+	else if (monthString == "Apr") month = 4;
+	else if (monthString == "May") month = 5;
+	else if (monthString == "Jun") month = 6;
+	else if (monthString == "Jul") month = 7;
+	else if (monthString == "Aug") month = 8;
+	else if (monthString == "Sep") month = 9;
+	else if (monthString == "Oct") month = 10;
+	else if (monthString == "Nov") month = 11;
+	else month = 12;
+}
 
 Date::Date(unsigned int year, unsigned int month, unsigned int day)
 {
