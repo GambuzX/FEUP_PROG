@@ -34,7 +34,24 @@ private:
 };
 
 
-
+class Student
+{
+public: 
+		Student(); 
+		Student(const std::string &code, const std::string &name); 
+		void setGrades(double shortExam, double project, double exam); 
+		std::string getCode() const;
+		std::string getName() const;
+		int getFinalGrade() const; 
+		// other get and set methods 
+		bool isApproved() const; // is the student approved or not ?
+		static int weightShortExam, weightProject, weightExam; // weights in percentage (ex:20,30,50)
+private: 
+		std::string code; // student code 
+		std::string name; // student complete name 
+		double shortExam, project, exam; // grades obtained by the student in the different components 
+		int finalGrade; 
+};
 
 
 #endif

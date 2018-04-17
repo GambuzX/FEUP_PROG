@@ -13,9 +13,9 @@ using namespace std;
 
 int main()
 {
-	Date date(1999, 3, 26), date1 (1,1,1), date2 (2019, 4, 25), date3 (1999, 3, 25), date4 (1999,4,26), date5;
+	Student student;
 
-	date5.show();
+	student.setGrades(20, 20, 20);
 
 	return 0;
 }

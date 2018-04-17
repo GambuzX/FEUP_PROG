@@ -196,4 +196,54 @@ int Date::daysInMonthOfYear(int month, int year)
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                    STUDENT                                                       //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+int Student::weightShortExam = 20;
+int Student::weightProject = 30;
+int Student::weightExam = 50;
+
+Student::Student()
+{
+}
+
+Student::Student(const string & code, const string & name)
+{
+	this->code = code;
+	this->name = name;
+}
+
+void Student::setGrades(double shortExam, double project, double exam)
+{
+	this->shortExam = shortExam;
+	this->project = project;
+	this->exam = exam;
+
+	double finalExamGrade = (shortExam * weightExam + project * weightProject + exam * weightExam ) / (double) 100;
+	double decimal = finalExamGrade - (int)finalExamGrade;
+	if (decimal >= 0.5)
+		exam = round(finalExamGrade + 0.1);
+	else
+		exam = round(finalExamGrade);
+}
+
+std::string Student::getCode() const
+{
+	return code;
+}
+
+std::string Student::getName() const
+{
+	return name;
+}
+
+int Student::getFinalGrade() const
+{
+	return finalGrade;
+}
+
+bool Student::isApproved() const
+{
+	return finalGrade >= 8.5f;
+}
