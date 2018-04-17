@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -299,4 +300,28 @@ Student readStudentData()
 	Student localStudent(nameInput, codeInput);
 	localStudent.setGrades(shortExamG, projectG, examG);
 	return localStudent;
+}
+
+void showAboveAverageStudents(ostream &outputStream, vector<Student> students)
+{
+	double totalSum = 0;
+	for (int i = 0; i < students.size(); i++)
+	{
+		totalSum += students.at(i).getFinalGrade();
+	}
+	double average = (double) totalSum / students.size();
+
+	outputStream << "Above average students\n";
+	outputStream << "______________________\n\n";
+	for (int i = 0; i < students.size(); i++)
+	{
+		Student currentStudent = students.at(i);
+		if (currentStudent.getFinalGrade() > average)
+		{
+			outputStream << "Name: " << currentStudent.getName() << endl;
+			outputStream << "Code: " << currentStudent.getCode() << endl;
+			outputStream << "Final grade: " << currentStudent.getFinalGrade() << endl << endl;
+		}
+	}
+	return;
 }

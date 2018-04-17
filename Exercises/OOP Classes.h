@@ -1,7 +1,9 @@
 #ifndef OOPCLASSES_H
 #define OOPCLASSES_H
 
+#include <fstream>
 #include <string>
+#include <vector>
 
 class Date
 {
@@ -54,5 +56,6 @@ private:
 };
 
 Student readStudentData();
+void showAboveAverageStudents(std::ostream &outputStream, std::vector<Student> students);
 
 #endif
