@@ -27,7 +27,7 @@ int main()
 	vector<Student> students = { student1, student2, student3, student4 };
 	vector<Student> students2;
 
-	readStudentsAndShowAboveAverage(students2);
+	readAndStoreStudentsTextFile();
 
 
 	return 0;

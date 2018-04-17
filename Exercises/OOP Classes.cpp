@@ -351,3 +351,43 @@ void readStudentsAndShowAboveAverage(vector<Student> & students)
 	showAboveAverageStudents(cout, students);
 	return;
 }
+
+void readAndStoreStudentsTextFile()
+{
+	string inputFileName;
+	cout << "Input file name? ";
+	cin >> inputFileName;
+	ifstream inputFile (inputFileName);
+
+	string outputFileName;
+	cout << "Output file name? ";
+	cin >> outputFileName;
+	ofstream outputFile(outputFileName);
+
+	string line;
+	while (getline(inputFile, line))
+	{
+		int semicolonPosition = line.find_first_of(';');
+		string code = line.substr(0, semicolonPosition);
+		outputFile << "Code: " << code << '\n';
+		line.erase(0, semicolonPosition + 1);
+
+		semicolonPosition = line.find_first_of(';');
+		string name = line.substr(0, semicolonPosition);
+		outputFile << "Name: " << name << '\n';
+		line.erase(0, semicolonPosition + 1);
+
+		semicolonPosition = line.find_first_of(';');
+		string shortExamGrade = line.substr(0, semicolonPosition);
+		outputFile << "Short Exam Grade: " << shortExamGrade << '\n';
+		line.erase(0, semicolonPosition + 1);
+
+		semicolonPosition = line.find_first_of(';');
+		string projectGrade = line.substr(0, semicolonPosition);
+		outputFile << "Project Grade: " << projectGrade << '\n';
+		line.erase(0, semicolonPosition + 1);
+
+		outputFile << "Exam Grade: " << line << endl << endl;
+	}
+	outputFile.close();
+}

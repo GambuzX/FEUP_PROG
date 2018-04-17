@@ -58,5 +58,6 @@ private:
 Student readStudentData();
 void showAboveAverageStudents(std::ostream &outputStream, std::vector<Student> students);
 void readStudentsAndShowAboveAverage(std::vector<Student> &);
+void readAndStoreStudentsTextFile();
 
 #endif
