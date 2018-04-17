@@ -45,6 +45,7 @@ public:
 		int getFinalGrade() const; 
 		// other get and set methods 
 		bool isApproved() const; // is the student approved or not ?
+		Student readStudentData();
 		static int weightShortExam, weightProject, weightExam; // weights in percentage (ex:20,30,50)
 private: 
 		std::string code; // student code 

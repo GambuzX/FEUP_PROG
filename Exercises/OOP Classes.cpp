@@ -220,12 +220,12 @@ void Student::setGrades(double shortExam, double project, double exam)
 	this->project = project;
 	this->exam = exam;
 
-	double finalExamGrade = (shortExam * weightExam + project * weightProject + exam * weightExam ) / (double) 100;
+	double finalExamGrade = (double) shortExam * weightShortExam / 100 + project * weightProject / 100 + exam * weightExam / 100;
 	double decimal = finalExamGrade - (int)finalExamGrade;
 	if (decimal >= 0.5)
-		exam = round(finalExamGrade + 0.1);
+		finalGrade = round(finalExamGrade + 0.1);
 	else
-		exam = round(finalExamGrade);
+		finalGrade = round(finalExamGrade);
 }
 
 std::string Student::getCode() const
@@ -246,4 +246,59 @@ int Student::getFinalGrade() const
 bool Student::isApproved() const
 {
 	return finalGrade >= 8.5f;
+}
+
+Student Student::readStudentData()
+{
+	Student localStudent;
+
+	string stringInput;
+	double shortExamG, projectG, examG;
+	cout << "Student code? "; 
+	cin >> stringInput;
+	while (!cin)
+	{
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cout << "Student code? "; 
+		cin >> stringInput;
+	}
+	localStudent.code = stringInput;
+
+	cin.ignore(10000, '\n'); //ignore line
+	cout << "Student Name? "; 
+	getline(cin, stringInput);
+	localStudent.name = stringInput;
+
+	cout << "Short exame grade? ";
+	cin >> shortExamG;
+	while (!cin)
+	{
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cout << "Short exame grade? "; 
+		cin >> shortExamG;
+	}
+
+	cout << "Project grade? ";
+	cin >> projectG;
+	while (!cin)
+	{
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cout << "Project grade? ";
+		cin >> projectG;
+	}
+
+	cout << "Exam grade? ";
+	cin >> examG;
+	while (!cin)
+	{
+		cin.clear();
+		cin.ignore(10000, '\n');
+		cout << "Exam grade? ";
+		cin >> examG;
+	}
+	localStudent.setGrades(shortExamG, projectG, examG);
+	return localStudent;
 }

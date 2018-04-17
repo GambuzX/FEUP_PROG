@@ -15,7 +15,9 @@ int main()
 {
 	Student student;
 
-	student.setGrades(20, 20, 20);
+	student = student.readStudentData();
+
+	cout << student.getName() << "- " << student.getCode() << " - " << student.getFinalGrade();
 
 	return 0;
 }
