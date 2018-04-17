@@ -15,9 +15,9 @@ int main()
 {
 	Student student;
 
-	student = student.readStudentData();
+	student = readStudentData();
 
-	cout << student.getName() << "- " << student.getCode() << " - " << student.getFinalGrade();
+	cout << student.getName() << " - " << student.getCode() << " - " << student.getFinalGrade() << endl;
 
 	return 0;
 }

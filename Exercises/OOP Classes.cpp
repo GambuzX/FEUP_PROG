@@ -248,27 +248,23 @@ bool Student::isApproved() const
 	return finalGrade >= 8.5f;
 }
 
-Student Student::readStudentData()
+Student readStudentData()
 {
-	Student localStudent;
-
-	string stringInput;
+	string codeInput, nameInput;
 	double shortExamG, projectG, examG;
 	cout << "Student code? "; 
-	cin >> stringInput;
+	cin >> codeInput;
 	while (!cin)
 	{
 		cin.clear();
 		cin.ignore(10000, '\n');
 		cout << "Student code? "; 
-		cin >> stringInput;
+		cin >> codeInput;
 	}
-	localStudent.code = stringInput;
 
 	cin.ignore(10000, '\n'); //ignore line
 	cout << "Student Name? "; 
-	getline(cin, stringInput);
-	localStudent.name = stringInput;
+	getline(cin, nameInput);
 
 	cout << "Short exame grade? ";
 	cin >> shortExamG;
@@ -299,6 +295,8 @@ Student Student::readStudentData()
 		cout << "Exam grade? ";
 		cin >> examG;
 	}
+
+	Student localStudent(nameInput, codeInput);
 	localStudent.setGrades(shortExamG, projectG, examG);
 	return localStudent;
 }
