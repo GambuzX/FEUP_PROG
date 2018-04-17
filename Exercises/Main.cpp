@@ -25,8 +25,9 @@ int main()
 	student4.setGrades(1, 0, 2);
 
 	vector<Student> students = { student1, student2, student3, student4 };
+	vector<Student> students2;
 
-	showAboveAverageStudents(cout, students);
+	readStudentsAndShowAboveAverage(students2);
 
 
 	return 0;

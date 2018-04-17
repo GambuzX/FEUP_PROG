@@ -297,7 +297,7 @@ Student readStudentData()
 		cin >> examG;
 	}
 
-	Student localStudent(nameInput, codeInput);
+	Student localStudent(codeInput, nameInput);
 	localStudent.setGrades(shortExamG, projectG, examG);
 	return localStudent;
 }
@@ -323,5 +323,31 @@ void showAboveAverageStudents(ostream &outputStream, vector<Student> students)
 			outputStream << "Final grade: " << currentStudent.getFinalGrade() << endl << endl;
 		}
 	}
+	return;
+}
+
+void readStudentsAndShowAboveAverage(vector<Student> & students)
+{
+	int numberOfStudents;
+	cout << "Number of students? ";
+	cin >> numberOfStudents;
+	while (cin.fail())
+	{
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << "Number of students? ";
+		cin >> numberOfStudents;
+	}
+	cout << endl;
+
+	for (int i = 1; i <= numberOfStudents; i++)
+	{
+		cout << "Student " << i << endl;
+		Student currentStudent = readStudentData();
+		cout << endl;
+		students.push_back(currentStudent);
+	}
+
+	showAboveAverageStudents(cout, students);
 	return;
 }
