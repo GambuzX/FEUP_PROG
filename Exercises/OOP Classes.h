@@ -6,6 +6,9 @@
 #include <vector>
 #include <iterator>
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//                                     CLASSES                                           //
+///////////////////////////////////////////////////////////////////////////////////////////
 class Date
 {
 public:
@@ -55,6 +58,25 @@ private:
 		double shortExam, project, exam; // grades obtained by the student in the different components 
 		int finalGrade; 
 };
+
+class Person
+{
+public:
+	std::string getName();
+	std::string getGender();
+	Date getBirthdate();
+private:
+	std::string name;
+	std::string gender;
+	Date birthdate;
+};
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//                                     FUNCTIONS                                         //
+///////////////////////////////////////////////////////////////////////////////////////////
+
 
 Student readStudentData();
 void showAboveAverageStudents(std::ostream &outputStream, std::vector<Student> students);
