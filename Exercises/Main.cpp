@@ -14,21 +14,17 @@ using namespace std;
 
 int main()
 {
-	Student student1("John", "up20154865");
-	Student student2("Sophie", "up201548965");
-	Student student3("Kate", "up2016846165");
-	Student student4("Kevin", "up2017849641");
+	vector<int> n1 = { 1,2,3,4,12,5,6,75,4 };
+	vector<double> n2 = { 12.0, 13.5, 120.120, 113, 56.99 };
 
-	student1.setGrades(10, 4, 16);
-	student2.setGrades(20, 20, 20);
-	student3.setGrades(14, 14, 15);
-	student4.setGrades(1, 0, 2);
 
-	vector<Student> students = { student1, student2, student3, student4 };
-	vector<Student> students2;
+	cout << vectorMax(n1) << endl;
 
-	readAndStoreStudentsTextFile();
+	cout << vectorMax(n2) << endl;
 
+	cout << vectorMin(n1) << endl;
+
+	cout << vectorMin(n2) << endl;
 
 	return 0;
 }

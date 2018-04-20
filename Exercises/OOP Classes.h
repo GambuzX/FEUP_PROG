@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <iterator>
 
 class Date
 {
@@ -59,5 +60,29 @@ Student readStudentData();
 void showAboveAverageStudents(std::ostream &outputStream, std::vector<Student> students);
 void readStudentsAndShowAboveAverage(std::vector<Student> &);
 void readAndStoreStudentsTextFile();
+
+template <typename T>
+T vectorMax(std::vector<T> numbers)
+{
+	T max = numbers.at(0);
+	for (int i = 0; i < numbers.size(); i++)
+	{
+		if (numbers.at(i) > max)
+			max = numbers.at(i);
+	}
+	return max;
+}
+
+template <typename T>
+T vectorMin(std::vector<T> numbers)
+{
+	T min = numbers.at(0);
+	for (int i = 0; i < numbers.size(); i++)
+	{
+		if (numbers.at(i) < min)
+			min = numbers.at(i);
+	}
+	return min;
+}
 
 #endif

@@ -391,3 +391,16 @@ void readAndStoreStudentsTextFile()
 	}
 	outputFile.close();
 }
+
+/*template <typename T>
+T vectorMax(vector<T> numbers)
+{
+	T max = numbers.at(0);
+	vector<T>::iterator it;
+	for (it = numbers.begin(); it != numbers.end(); it++)
+	{
+		if (*it > max)
+			max = *it;
+	}
+	return max;
+}*/
