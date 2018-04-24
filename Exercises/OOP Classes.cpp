@@ -408,5 +408,5 @@ string Person::getGender()
 
 Date Person::getBirthdate()
 {
-	return birthdate
+	return birthdate;
 }
