@@ -8,23 +8,19 @@
 #include <iomanip>
 #include <string>
 #include <vector>
-#include "OOP Classes.h"
+#include "examStudy.h"
 
 using namespace std;
 
 int main()
 {
-	vector<int> n1 = { 1,2,3,4,12,5,6,75,4 };
-	vector<double> n2 = { 12.0, 13.5, 120.120, 113, 56.99 };
+	bool success = simplifyNamesFile();
 
-
-	cout << vectorMax(n1) << endl;
-
-	cout << vectorMax(n2) << endl;
-
-	cout << vectorMin(n1) << endl;
-
-	cout << vectorMin(n2) << endl;
+	if (!success)
+	{
+		cerr << "people1.txt not found\n";
+		exit(1);
+	}
 
 	return 0;
 }
