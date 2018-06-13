@@ -33,8 +33,8 @@ bool simplifyNamesFile()
 
 	ofstream outputFile("people2.txt");
 
-	string line;
-	while (getline(cin, line))
+	string line = "";
+	while (getline(inputfile, line))
 	{
 		string placeholder;
 		simplify(line, placeholder);
@@ -44,4 +44,50 @@ bool simplifyNamesFile()
 	inputfile.close();
 	outputFile.close();
 	return true;
+}
+
+Date::Date(int y, int m, int d )
+{
+	this->y = y;
+	this->m = m;
+	this->d = d;
+}
+
+bool operator<(const Date& left, const Date& right)
+{
+	string leftDate, rightDate;
+	ostringstream ostream;
+
+	ostream << left.y << left.m << left.d;
+	leftDate = ostream.str();
+
+	ostream.str("");
+	ostream << right.y << right.m << right.d;
+	rightDate = ostream.str();
+
+	return leftDate < rightDate;
+}
+
+bool operator==(const Date & left, const Date & right)
+{
+	return false;
+}
+
+istream& operator>> (istream& f, Date& date)
+{
+	string line;
+	getline(f, line);
+	istringstream istream(line);
+
+	char hifen;
+	int year, month, day;
+	istream >> year >> hifen >> month >> hifen >> day;
+	
+	if (f.fail() || year < 0 || month < 0 || day < 0)
+		throw runtime_error("invalid Date");
+
+	date.d = day;
+	date.m = month;
+	date.y = year;
+	return f;
 }
