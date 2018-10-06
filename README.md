@@ -1,9 +1,8 @@
 # Programming 2017-2018 :file_folder:
-___
 
 Exercises solved during the PROG curricular unit.
 
-Final Grade: 20
+**Final Grade: 20**
 
 ### Technologies Used
 * C
