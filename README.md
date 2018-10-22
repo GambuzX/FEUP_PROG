@@ -18,5 +18,3 @@ This repository was used for educational purposes and I do not take any responsi
 
 ### Notes:
 The repository is a bit messy because in the end of the semester I created different files to study for the exam. The majoriy of exercises is declared in the Exercises[1-4].h files and implemented in exercises.cpp.
-
-If you wish to see the questions, you may do so under Exercises Papers.
